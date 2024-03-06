@@ -79,7 +79,8 @@ const Dashboard = () => {
             pageNumber={pageNumber}
             renderTextLayer={false}
             renderAnnotationLayer={false}
-            width={screenSize?.width}
+            width={screenSize?.width < screenSize.height && screenSize.width}
+            height={screenSize?.width > screenSize.height && screenSize.height}
           />
         </Document>
 
