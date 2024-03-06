@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.light {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 255,255,255;
+  --background-end-rgb: 255, 255, 255;
+  --color-main : rgba(0,0,0,1);
+  color-scheme: light
+}
+
+
+.dark{
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+    --color-main : rgba(255,255,255,1);
+    color-scheme: dark
+
+}
+@layer components {
+  html , body , *{
+    @apply transition-[".1s"]
+  }
+}
+.introduce-welcome > div  ,.introduce-name-bound{
+  animation-name: welcome ;
+  animation-duration: 4s;
+  animation-iteration-count: infinite, infinite;
+}
+@keyframes welcome {
+  0% , 100% {
+    transform:translateY(-50%);
+    opacity: 1;
+  }
+  30% {
+    transform: translateY(-50%);
+  }
+
+  50% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  70%{
+    transform: translateY(0);
+  }
+}
+.link-selected{
+  position: relative;
+}
+.link-selected::before{
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+
+  height: 2px;
+  width: 150%;
+
+  background: var(--color-main);
+
+}
