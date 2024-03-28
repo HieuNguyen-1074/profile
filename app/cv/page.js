@@ -17,9 +17,9 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
 const cvs = {
   en: {
     id: 'en',
-    src: './cv.pdf',
+    src: './CV_NGUYEN-VAN-HIEU_FRONT-END-DEVELOPER(E).pdf',
   },
-  vi: { id: 'vi', src: './cv-v.pdf' },
+  vi: { id: 'vi', src: './CV_NGUYEN-VAN-HIEU_FRONT-END-DEVELOPER(V).pdf' },
 };
 const Dashboard = () => {
   //state
